@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+	<Properties>
+		<Property name="windowsFileName">D:/logs/Security.log</Property>
+		<Property name="LinuxFileName">/home/oracle/logs/Security.log</Property>
+	</Properties>
+
+	<Appenders>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level [%t] %l - %m%n" />
+		</Console>
+
+		<!-- <RandomAccessFile name="File" fileName="${windowsFileName}">
+			<ThresholdFilter level="TRACE" onMatch="ACCEPT" onMismatch="DENY"/>
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%t] %l - %m%n</Pattern>
+			</PatternLayout>
+		</RandomAccessFile> -->
+
+	</Appenders>
+
+	<Loggers>
+		<Root level="WARN">
+			<AppenderRef ref="Console" />
+			<!-- <AppenderRef ref="File" /> -->
+		</Root>
+	</Loggers>
+
+</Configuration>

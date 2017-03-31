@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="golbel-struts" extends="json-default">
+
+		<default-interceptor-ref name="jsonValidationWorkflowStack" />
+
+		<action name="login">
+			<result>/login.jsp</result>
+		</action>
+		<action name="loginAction" class="loginAction">
+			<result name="login">/index.htm</result>
+			<result name="end">/login.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
